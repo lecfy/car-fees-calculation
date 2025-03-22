@@ -23,10 +23,10 @@ class TestFees extends TestCase
     {
         $this->calculationService = new CalculationService();
 
-        $this->calculationService->feesList[] = new BasicFee();
-        $this->calculationService->feesList[] = new SpecialFee();
-        $this->calculationService->feesList[] = new AssociationFee();
-        $this->calculationService->feesList[] = new StorageFee();
+        $this->calculationService->addFee(new BasicFee());
+        $this->calculationService->addFee(new SpecialFee());
+        $this->calculationService->addFee(new AssociationFee());
+        $this->calculationService->addFee(new StorageFee());
     }
 
     public function testVehicle(): void
